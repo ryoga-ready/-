@@ -226,25 +226,6 @@ cursor:pointer;
 }
 
 
-#大当たり確率{
-    font-size: 40px;
-    color: white;
-    font-weight: bolder;
-    position: absolute;
-    bottom: px;
-    right: 200px;
-    background-color: black;
-}
-
-#probability{
-    font-size: 40px;
-    color: white;
-    font-weight: bolder;
-    position: absolute;
-    bottom: 100px;
-    right: 200px;
-    background-color: black;
-}
 
 #bet{
      font-size: 40px;
