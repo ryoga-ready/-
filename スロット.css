@@ -1,0 +1,257 @@
+body{
+    /*background-image:url("背景画像.jpg") ;*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    margin: 0;
+    min-height: 100dvh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: radial-gradient(circle, #113766, #000);
+    animation: bgFlash 0.5s infinite alternate;
+}
+
+@keyframes bgFlash{
+  0%{
+    filter: brightness(1);
+  }
+  100%{
+    filter: brightness(1.5);
+  }
+
+}
+
+body.peka{
+  background:
+    radial-gradient(circle at center, #1900ff 0%, transparent 60%),
+    #000;
+  animation: bgFlash 0.3s infinite alternate;
+}
+
+body.bonus  {
+    background: radial-gradient(circle, #ffcc00, #ff6600, #000);
+    animation: flash 0.3s infinite alternate;
+}
+
+/* 点滅アニメーション */
+@keyframes flash {
+    0% {
+        filter: brightness(1);
+    }
+    100% {
+        filter: brightness(1.5);
+    }
+}
+
+
+#タイトル{
+    font-size: 50px;
+    color: white;
+}
+
+#現在回転数{
+    font-size: 50px;
+    color: white;
+}
+
+#回転数{
+    font-size: 50px;
+    color: white;
+}
+
+
+
+
+.reel{
+background:white;
+width:100px;
+height:120px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:10px;
+box-shadow:0 0 10px black inset;
+}
+
+.slot:hover{
+    background-color: aqua;
+}
+
+.slotarea{
+display:flex;
+justify-content:center;
+gap:60px;
+font-size:80px;
+background:#111;
+padding:30px;
+border-radius:15px;
+border:5px solid silver;
+box-shadow:0 0 20px gold;
+}
+
+#result{
+font-size: 40px;
+margin-top: 20px;
+color: red;
+font-weight: bolder;
+}
+
+
+.win{
+    font-size: 80px;
+    color: red;
+    text-shadow: 0 0 20px yellow;
+}
+
+.GOGO{
+    font-size: 40px;
+    color: #ff00ff;
+  font-weight: bold;
+  animation: gogoFlash 0.6s infinite alternate;
+}
+
+@keyframes gogoFlash{
+  0%{
+    text-shadow: 0 0 5px #ff00ff;
+  }
+  100%{
+    text-shadow: 
+      0 0 10px #ff00ff,
+      0 0 20px #ff00ff,
+      0 0 40px #ff00ff;
+  }
+}
+
+
+.CHANCE{
+    font-size: 40px;
+    color: white;
+  font-weight: bold;
+  animation: gogochan 0.6s infinite alternate;
+}
+
+@keyframes gogochance{
+  0%{
+    text-shadow: 0 0 5px white;
+  }
+  100%{
+    text-shadow: 
+      0 0 10px white,
+      0 0 20px white,
+      0 0 40px white;
+  }
+}
+
+#ペカ枠{
+    border: 4px solid rgb(15, 116, 199);
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 20px;
+    display: inline-block;
+    position: absolute;
+    bottom: 100px;
+    left: 200px;
+}
+
+#GOGO{
+    font-size: 40px;
+    margin-top: 20px;
+    font-weight: bolder;
+    background-color: transparent;
+    color: transparent
+    transform: rotate(-15deg);
+}
+
+#CHANCE{
+    font-size: 40px;
+    margin-top: 20px;
+    font-weight: bolder;
+    background-color: transparent;
+}
+
+.buttonarea{
+    display: flex;
+    justify-content: center; /* 中央寄せ */
+    gap: 100px;  
+}
+
+.buttonarea button:hover{
+background-color: rgb(153, 61, 61);
+transition: 0.3s;
+}
+
+.buttonarea button{
+width:90px;
+height:90px;
+border-radius:50%;
+font-size:30px;
+background:red;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+@keyframes buttonGlow{
+0%{box-shadow:0 0 5px red;}
+100%{box-shadow:0 0 20px red;}
+}
+
+#spin{
+    font-size: 40px;
+    margin-top: 20px;
+    font-weight: bolder;
+}
+
+#保有コイン{
+    font-size: 40px;
+    color: white;
+    font-weight: bolder;
+    position: absolute;
+    bottom: 200px;
+    right: 200px;
+    background-color: black;
+}
+
+#coin{
+    font-size: 40px;
+    color: white;
+    font-weight: bolder;
+    position: absolute;
+    bottom: 100px;
+    right: 200px;
+    background-color: black;
+}
+
+
+#大当たり確率{
+    font-size: 40px;
+    color: white;
+    font-weight: bolder;
+    position: absolute;
+    bottom: px;
+    right: 200px;
+    background-color: black;
+}
+
+#probability{
+    font-size: 40px;
+    color: white;
+    font-weight: bolder;
+    position: absolute;
+    bottom: 100px;
+    right: 200px;
+    background-color: black;
+}
+
+#bet{
+     font-size: 40px;
+    color: white;
+    font-weight: bolder;
+    position: absolute;
+    bottom: 30x;
+    right: 200px;
+    background-color: black;
+}

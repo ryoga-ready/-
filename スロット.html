@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T8C3GHMC');</script>
+<!-- End Google Tag Manager -->
+
+<meta charset="UTF-8">
+<meta name="author" content="MsR">
+<title>イライラパラダイス</title>
+<link rel="stylesheet" href="スロット.css">
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8C3GHMC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<script src="スロット.js"></script>
+
+<h1><span id="タイトル">スロットゲーム</span></h1>
+<h2><span id="現在回転数">現在回転数</span></h2>
+<h3><div id="回転数">0</div>回</h3>
+
+<div class="slotarea">
+<span class=reel id="slot1">🍇</span>
+<span class=reel id="slot2">🍇</span>
+<span class=reel id="slot3">🍇</span>
+</div>
+
+<div class="buttonarea">
+<button  onclick="push1()">GO</button>
+<button  onclick="push2()">GO</button>
+<button  onclick="push3()">GO</button>
+</div>
+
+
+<button id="spin"onclick="spin()">回す</button>
+
+
+<div id="result"></div>
+<div id="flash"></div>
+<div id="ペカ枠">
+<p><span id="GOGO">GO!GO!</span></p>
+<p><span id="CHANCE">CHANCE</span></p>
+</div>
+<audio id="ペカり音" src="ペカり音.mp3"></audio>
+<audio id="ボーナス音 (1)" src="ボーナス音 (1).mp3"></audio>
+<audio id="ルーレット回転中" src="電子ルーレット回転中.mp3"></audio>
+<audio id="ルーレット停止1" src="電子ルーレット停止1.mp3"></audio>
+<audio id="ルーレット停止2" src="電子ルーレット停止2.mp3"></audio>
+<audio id="ルーレット停止3" src="電子ルーレット停止3.mp3"></audio>
+<audio id="払い出し" src="データ表示1.mp3"></audio>
+<span id="保有コイン">保有コイン</span>
+<div id="coin"></div>
+<span id="大当たり確率">確率</span>
+<div id="probability"></div>
+
+<script src="スロット.js"></script>
+</body>
+
+    

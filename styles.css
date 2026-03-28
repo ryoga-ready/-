@@ -1,0 +1,26 @@
+body{
+    background-image:url("背景画像.jpg") ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    margin: 0;
+    min-height: 100dvh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.slot{
+    font-size: 15px;
+    font-family:"游明朝" ;
+    padding:30px 30px;
+    border: 1px solid #ced1c5;
+    background-color:rgba(8, 231, 64, 0.1);
+    border-radius: 25px;
+    transition: 0.3s;
+}
+.slot:hover{
+    background-color: aqua;
+}
