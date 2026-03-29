@@ -1,3 +1,23 @@
+const touch1=document.getElementById("push1")
+const touch2=document.getElementById("push2")
+const touch3=document.getElementById("push3")
+
+touch1.addEventListener("touchstart",(e)=>{
+    e.preventDefault()
+    push1()})
+
+touch2.addEventListener("touchstart",(e)=>{
+    e.preventDefault()
+    push2()})
+
+touch3.addEventListener("touchstart",(e)=>{
+    e.preventDefault()
+    push3()})
+
+touch1.addEventListener("click",()=>push1())
+touch2.addEventListener("click",()=>push2())
+touch3.addEventListener("click",()=>push3())
+
 
 
 const symbols=["🍇","🍒","🔔","🤡","🐬","7"]
