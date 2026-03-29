@@ -195,7 +195,7 @@ const chance=Math.floor(Math.random()*2)
    }
 
 if(!hot){
-const reach=Math.floor(Math.random()*5)
+const reach=Math.floor(Math.random()*50)
 if(reach===0){
     hot=true
 }
