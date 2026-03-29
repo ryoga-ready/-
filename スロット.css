@@ -55,11 +55,13 @@ body.bonus  {
 #現在回転数{
     font-size: 50px;
     color: white;
+    background-color: transparent;
 }
 
 #回転数{
     font-size: 50px;
     color: white;
+    background-color: transparent;
 }
 
 
@@ -212,7 +214,7 @@ cursor:pointer;
     position: absolute;
     bottom: 200px;
     right: 200px;
-    background-color: black;
+    background-color:transparent;
 }
 
 #coin{
@@ -222,7 +224,7 @@ cursor:pointer;
     position: absolute;
     bottom: 100px;
     right: 200px;
-    background-color: black;
+    background-color: transparent;
 }
 
 

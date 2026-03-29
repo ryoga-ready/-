@@ -19,6 +19,16 @@ touch2.addEventListener("click",()=>push2())
 touch3.addEventListener("click",()=>push3())
 
 
+const touch4=document.getElementById("spin")
+
+touch4.addEventListener("touchstart",(e)=>{
+    e.preventDefault()
+    spin()})
+
+touch4.addEventListener("click",()=>spin())
+
+
+
 
 const symbols=["🍇","🍒","🔔","🤡","🐬","7"]
 
@@ -37,10 +47,15 @@ let reachclera=false
 
 let payout=0
 
+let pushstop1=false
+let pushstop2=false
+let pushstop3=false
+let pushstop4=false
 
 counter=0
 
 function spin(){
+    pushstop4=true
     if(spinning)return
     document.getElementById("ルーレット回転中").play()
     document.getElementById("result").textContent=""
@@ -82,20 +97,13 @@ reel3=setInterval(()=>{
     const r=Math.floor(Math.random()*symbols.length)
 slot3.textContent=symbols[r]},50)
 
-/*
-setTimeout(stopreel1,onclick.push1)
-setTimeout(stopreel2,1300)
-setTimeout(stopreel3,1600)
-*/
 }
 
 
-let pushstop1=false
-let pushstop2=false
-let pushstop3=false
-
 function push1(){
+    if(pushstop4){
     clearInterval(reel1)
+    pushstop1=true
     if(wining){
         document.getElementById("slot1").textContent="7"
     }
@@ -104,8 +112,11 @@ function push1(){
     }
        document.getElementById("ルーレット停止1").play()
 }
+}
 function push2(){
+    if(pushstop1){
     clearInterval(reel2)
+    pushstop2=true    
     if(wining){
         document.getElementById("slot2").textContent="7"
     }
@@ -114,9 +125,11 @@ function push2(){
     }
     document.getElementById("ルーレット停止2").play()
 }
+}
 function push3(){
-    clearInterval(reel3)  
-
+    if(pushstop2){
+    clearInterval(reel3)
+    pushstop3=true  
     if(wining){
         document.getElementById("slot3").textContent="7"
     }
@@ -146,6 +159,11 @@ function push3(){
     bonusend.currentTime = 0; 
     pekaclera=false
 }
+pushstop1=false
+pushstop2=false
+pushstop3=false
+pushstop4=false
+}
 }
 
 function checkwin(){
@@ -172,9 +190,12 @@ slot3.textContent=symbols[rundom3];
 
 
 const chance=Math.floor(Math.random()*2)
+   if(reachclera&&chance===0){
+    nextWin=true
+   }
 
 if(!hot){
-const reach=Math.floor(Math.random()*50)
+const reach=Math.floor(Math.random()*5)
 if(reach===0){
     hot=true
 }
@@ -191,16 +212,13 @@ if(hot&&!nextWin&&!wining&&!pekaclera){
    document.getElementById("ペカり音").play()
    reachclera=true
    }
-
-
-   if(reachclera&&chance===0){
-    nextWin=true
-   }
 }
 
 if(s1=="7"&&
     s2=="7"&&
-    s3=="7"){
+    s3=="7"&&
+reachclera)
+{
 document.getElementById("result").textContent="BIG BONUS!!"
 document.getElementById("ボーナス音 (1)").play()
 counter=0
