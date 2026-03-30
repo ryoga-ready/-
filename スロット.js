@@ -55,6 +55,11 @@ let pushstop4=false
 counter=0
 
 function spin(){
+
+dataLayer.push({
+    event: "spin"
+  });
+
     pushstop4=true
     if(spinning)return
     document.getElementById("ルーレット回転中").play()
@@ -219,6 +224,12 @@ if(s1=="7"&&
     s3=="7"&&
 reachclera)
 {
+
+dataLayer.push({
+    event: "BONUS"
+  });
+
+
 document.getElementById("result").textContent="BIG BONUS!!"
 document.getElementById("ボーナス音 (1)").play()
 counter=0
